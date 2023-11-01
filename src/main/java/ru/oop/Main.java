@@ -39,6 +39,10 @@ public class Main {
      */
     public static void moveTo(Person person, Position destination) {
         // TODO
+        Transoprt bicycle = new Bicycle();
+        person.walk(bicycle.getPosition());
+        bicycle.drive(bicycle.getPosition(), destination);
+        person.walk(destination);
         assert person.getPosition() == destination;
     }
 }
